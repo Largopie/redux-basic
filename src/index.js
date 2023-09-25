@@ -6,10 +6,16 @@ let count = 0;
 
 number.innerText = count;
 
+const updateText = () => {
+  number.innerText = count;
+}
+
 add.addEventListener("click", () => {
-  number.innerText = ++count;
+  count = count + 1;
+  updateText();
 })
 
 minus.addEventListener("click", () => {
-  number.innerText = --count;
+  count = count - 1;
+  updateText();
 })
