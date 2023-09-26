@@ -18,5 +18,13 @@ const countModifier = (count = 0, action) => {
 
 const countStore = createStore(countModifier);
 
-add.addEventListener("click", () => countStore.dispatch({ type: "ADD" }));
-minus.addEventListener("click", () => countStore.dispatch({ type: "MINUS" }));
+const handleAdd = () => {
+  countStore.dispatch({ type: "ADD" });
+}
+
+const handleMinus = () => {
+  countStore.dispatch({ type: "MINUS" });
+}
+
+add.addEventListener("click", handleAdd);
+minus.addEventListener("click", handleMinus);
