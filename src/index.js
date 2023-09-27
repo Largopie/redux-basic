@@ -27,9 +27,8 @@ const reducer = (state = [], action) => {
       return [{ text:action.text, id: Date.now() }, ...state];
 
     case DELETE_TODO:
-      return [];
-    
-      default:
+      return state.filter((toDo) => toDo.id !== parseInt(action.id));
+    default:
       return state;
   }
 };
