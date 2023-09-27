@@ -11,3 +11,4 @@ Vanilla Redux와 React-Redux 학습 저장소
 - [] action: Redux에서 function을 부를 때 쓰는 두 번째 parameter 또는 argument로 reducer와 소통하기 위한 방법
 - [] subscribe: store 안에 있는 변화 감지
     > ex) `store.subscribe(func)` store 내부의 변화를 감지하면 func 실행
+- [] `splice` 함수는 `state` 자체에 변화를 주기 때문에 `filter` 함수를 사용하여 새 배열을 반환하게 해야 함
